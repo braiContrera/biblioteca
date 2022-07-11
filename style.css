@@ -12,6 +12,7 @@
   display: flex;
 
   align-items: center;
+  justify-content: flex-start;
   height: auto;
   width: 100%;
   background-color:pink;
@@ -25,21 +26,25 @@
 
 .barra__form {
   display: flex;
-  position: relative;
-  width: 1fr;
-  height: 1fr;
+  width: auto;
+  height: 30px;
 
 
 }
-
-
 
 .barra__form button {
   background-color: transparent;
   border-width: initial;
   border-style: none;
+}
+
+.barra__form input {
+  display: flex;
+  border-style: none;
+  width: 400px;
 
 }
+
 
 
 .barra__form button:hover {
@@ -53,6 +58,8 @@
 	height: 20px;
 	position: relative;
 	z-index: 2;
+  margin-right: 50px;
+
 }
  
 #menu_on span{
@@ -64,6 +71,7 @@
 	background: #fff;
 	transition: all 0.25s ease; /* Propiedades a animar | Tiempo | Tipo animación*/
 	transform-origin : 0px 100%;
+  margin-left: 20px;
 }
  
 #menu_on span:nth-child(2){
@@ -150,11 +158,7 @@ nav a:hover{
   }
 
 
-  .barra__form button {
-    background-color: transparent;
-    border-width: initial;
-    border-style: none;
-  }
+
 
   li {
     display: inline-block;
