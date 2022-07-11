@@ -10,7 +10,7 @@
 .encabezado {
   grid-area: header;
   display: flex;
-  position: absolute;
+
   align-items: center;
   height: auto;
   width: 100%;
@@ -46,74 +46,84 @@
   transform: scale(1.5);
 }
 
-ul {
-  display: none;
+
+#menu_on{
+	display: inline-block;
+	width:30px;
+	height: 20px;
+	position: relative;
+	z-index: 2;
+}
+ 
+#menu_on span{
+	width: 100%;
+	height: 4px;
+	border-radius: 4px;
+	display: block;
+	position: absolute;
+	background: #fff;
+	transition: all 0.25s ease; /* Propiedades a animar | Tiempo | Tipo animación*/
+	transform-origin : 0px 100%;
+}
+ 
+#menu_on span:nth-child(2){
+	top: calc(50% - 2px);
+}
+ 
+#menu_on span:nth-child(3){
+bottom: 0;
 }
 
-input:checked~ul {
-  display: block;
+nav{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left:-300px; /* Escondemos nuestro menú con un valor negativo */ 
+	width: 300px;
+	z-index: 1;
+	padding: 90px 30px 30px;
+	background: #68C5DB;
+	opacity: 0;
+	transition: all 0.75s ease;
+	font-size: 1.2em;
+	overflow-y: auto;
 }
-
-input:checked+input {
-  background-color: red;
+nav a{
+	display:block;
+	text-decoration: none;
+	padding: 10px;
+	color: rgba(255,255,255,0.75);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	transition: all ease 0.25s;
 }
-
-nav input {
-  display: none;
-}
-
-label {
-  box-sizing: border-box;
-  display: inline-block;
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  font-weight: bold;
-  text-align: center;
-  user-select: none;
-}
-
-/* Estilo del boton cuando se pasa el mouse por encima*/
-label:hover {
-  background: grey;
-}
-
-/* Estilo del boton cuando el menú está expandido*/
-input:checked~label {
-  background: lightgrey;
-}
-
-input:checked~* .barra__form {
-  background-color: red;
-  visibility: hidden;
-}
-
-
-ul {
-  margin-top: 0;
-  padding: 0;
-  width: 200px;
-
-}
-
-
-li {
-  display: block;
-  background: lightgrey;
-  margin: 0;
-  padding: 10px;
-  list-style: none;
-  border-bottom: 1px solid grey;
-}
-
-/*Estilo cuando el mouse pasa encima de cada link del menu*/
-li:hover {
-  filter: brightness(110%);
+ 
+nav a:hover{
+	color: rgba(255,255,255,1);
+	border-bottom-color:rgba(255,255,255,0.4);
 }
 
 
+.visible_menu span:nth-child(1){
+	transform: rotate(45deg) translate(-2px,1px); 
+}
+ 
+.visible_menu span:nth-child(2){
+	opacity: 0;
+}
+ 
+.visible_menu span:nth-child(3){
+	transform: rotate(-45deg) translate(-3px,3px); 
+}
+
+
+.visible_menu #content{
+      transform: translateX(260px);
+}
+
+.visible_menu nav{
+	left: 0;
+	opacity: 1;
+}
 @media (min-width: 600px) {
   .encabezado {
     grid-area: header;
@@ -139,10 +149,6 @@ li:hover {
     justify-content: start;
   }
 
-  .respmenu {
-    display: none;
-    visibility: hidden;
-  }
 
   .barra__form button {
     background-color: transparent;
@@ -175,11 +181,5 @@ li:hover {
     display: none
   }
 
-  .respmenu input {
-    visibility: hidden;
-    display: none;
-    background-color: black;
-    width: 300px;
-    height: 300px;
-  }
+
 }
