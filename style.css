@@ -1,174 +1,185 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@1&display=swap');
+
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10vh 85vh 5vh;
-    grid-template-areas: "header header header" "menu__imagenes menu__imagenes menu__imagenes" "footer footer footer";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 10vh 85vh 5vh;
+  grid-template-areas: "header header header""menu__imagenes menu__imagenes menu__imagenes""footer footer footer";
 }
 
 .encabezado {
-    grid-area: header;
-    display: flex;
-    position: absolute;
-    align-items: center;
-    height: auto;
-    width: 100%;
-    background-color: red;
+  grid-area: header;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  background-color: red;
 }
 
 
 .encabezado__titulo {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
+
+.barra__form {
+  display: flex;
+  position: relative;
+  width: 1fr;
+  height: 1fr;
+  background-color: yellow;
 
 }
 
 
-.barra__form input {
-    width: 500px;
-    height: 40px;
-  
-}
 
 .barra__form button {
+  background-color: transparent;
+  border-width: initial;
+  border-style: none;
+
+}
+
+
+.barra__form button:hover {
+  transform: scale(1.5);
+}
+
+ul {
+  display: none;
+}
+
+input:checked~ul {
+  display: block;
+}
+
+input:checked+input {
+  background-color: red;
+}
+
+nav input {
+  display: none;
+}
+
+label {
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+}
+
+/* Estilo del boton cuando se pasa el mouse por encima*/
+label:hover {
+  background: grey;
+}
+
+/* Estilo del boton cuando el menú está expandido*/
+input:checked~label {
+  background: lightgrey;
+}
+
+input:checked~* .barra__form {
+  background-color: red;
+  visibility: hidden;
+}
+
+
+ul {
+  margin-top: 0;
+  padding: 0;
+  width: 200px;
+
+}
+
+
+li {
+  display: block;
+  background: lightgrey;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid grey;
+}
+
+/*Estilo cuando el mouse pasa encima de cada link del menu*/
+li:hover {
+  filter: brightness(110%);
+}
+
+
+@media (min-width: 600px) {
+  .encabezado {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: red;
+  }
+
+  .encabezado__barra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .encabezado__titulo {
+    display: flex;
+    font-size: 50px;
+    color: white;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .respmenu {
+    display: none;
+    visibility: hidden;
+  }
+
+  .barra__form button {
     background-color: transparent;
     border-width: initial;
     border-style: none;
-    
-}
-
-
-
-
-ul{
-    display: none;
-  }
-  
-  input:checked  ~ ul{
-    display:block;
-  }
-  
- nav input {
-    display: none;
-  }
-  
-  label {
-    box-sizing: border-box;
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    font-weight: bold;
-    text-align: center;
-    user-select: none;
-  }
-  
-  /* Estilo del boton cuando se pasa el mouse por encima*/
-  label:hover{
-    background: grey;
-  }
-  
-  /* Estilo del boton cuando el menú está expandido*/
-  input:checked ~ label {
-    background: lightgrey; 
-  }
-  input:checked ~ .barra__form button {
-   display: none;
-   visibility: hidden;
   }
 
-  input:checked ~ .barra__form button {
-    display: none;
-    visibility: hidden;
-   }
-  ul{
-    margin-top:0;
-    padding: 0;
-    width: 200px;
-  
-  }
-  
-  
   li {
-    display: block;
-    background: lightgrey;
-    margin: 0;
-    padding: 10px;
-    list-style: none;
-    border-bottom: 1px solid grey;
-  }
-  
-  /*Estilo cuando el mouse pasa encima de cada link del menu*/
-  li:hover {
-    filter: brightness(110%);
+    display: inline-block;
+    padding: 15px 30px;
+    border-bottom: 2px solid #3b0234;
+    margin-right: 20px;
+    font-variant: small-caps;
   }
 
+  li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+  }
 
+  .fa-bars {
+    visibility: hidden;
+    display: none
+  }
 
-@media (min-width: 400px) {
-    .encabezado {
-        grid-area: header;
-        display: flex;
-        align-items: center;
-        height: auto;
-        width: 100%;
-        background-color: red;
-    }
-    .encabezado__barra {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    .encabezado__titulo {
-        display: flex;
-        font-size: 50px;
-        color: white;
-        margin-left: 20px;
-        align-items: center;
-        justify-content: start;
-    }
-    .respmenu {
-        display: none;
-        visibility: hidden;
-    }
-    .barra__form input {
-        width: 500px;
-        height: 40px;
-    }
-    .barra__form button {
-        background-color: transparent;
-        border-width: initial;
-        border-style: none;
-    }
-    li {
-        display: inline-block;
-        padding: 15px 30px;
-        border-bottom: 2px solid #3b0234;
-        margin-right: 20px;
-        font-variant: small-caps;
-    }
-    li a {
-        text-decoration: none;
-        color: white;
-        font-size: 25px;
-        font-weight: bolder;
-    }
-    .fa-bars {
-        visibility: hidden;
-        display: none
-    }
-    .fa-times {
-        visibility: hidden;
-        display: none
-    }
-    .respmenu input {
-        visibility: hidden;
-        display: none;
-        background-color: black;
-        width: 300px;
-        height: 300px;
-    }
+  .fa-times {
+    visibility: hidden;
+    display: none
+  }
+
+  .respmenu input {
+    visibility: hidden;
+    display: none;
+    background-color: black;
+    width: 300px;
+    height: 300px;
+  }
 }
