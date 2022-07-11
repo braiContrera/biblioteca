@@ -10,62 +10,56 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="normalize.css" />
-<script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous">
-</script>
+  <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous">
+    </script>
   <title>Floreciendo</title>
-  
-<!-- Primero cargamos Jquery -->
-<script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
- integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous">
-</script>
- 
-<!-- Creamos nuestra función -->
-<script type="text/javascript">
-	$( document ).ready(function() {
-		$('#menu_on').click(function(){ // Al hacer click...
-		   $('body').toggleClass('visible_menu'); // Añadimos o eliminamos la clase 'visible_menu' al body
-		 })
-	});
-</script>
+
+  <!-- Primero cargamos Jquery -->
+  <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous">
+    </script>
+
+  <!-- Creamos nuestra función -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#menu_on').click(function () { // Al hacer click...
+        $('body').toggleClass('visible_menu'); // Añadimos o eliminamos la clase 'visible_menu' al body
+      })
+    });
+  </script>
 </head>
 
 <body>
   <div class="container">
-
     <header class="encabezado">
- 
       <h1 class="encabezado__titulo">Floreciend<img src="./img/o.png" alt=""></h1>
-
-
-      <div id="wrapper">
-        <header id="#header">
-          <a href="#" id="menu_on">
-            <span></span>
-            <span></span>
-            <span></span>
-          </a>
-          </header>
-        <nav>	
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="biblioteca.html">Biblioteca</a></li>
-            <li><a href="taller.html">Talleres</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-      
-          </ul>
-        </nav>
-
-      </div>
-    
-
+      <a id="menu_on">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
       <form class="barra__form">
         <input type="search" placeholder="Buscar">
         <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
-
     </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="biblioteca.html">Biblioteca</a></li>
+        <li><a href="taller.html">Talleres</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+
+      </ul>
+    </nav>
+
+
+
+
+
+
 
 
 
