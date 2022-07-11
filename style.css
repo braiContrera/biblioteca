@@ -108,7 +108,7 @@ ul{
 
 
 
-@media (min-width: 300px) {
+@media (min-width: 400px) {
     .encabezado {
         grid-area: header;
         display: flex;
