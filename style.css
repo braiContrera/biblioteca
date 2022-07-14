@@ -27,29 +27,35 @@ footer {
   grid-template-rows: 15vh 85vh;
   overflow: hidden;
 
- 
-}
-.menu__center{
-display: flex;
-flex-direction: column;
 
-grid-column: 1/3;
-align-items: center;
 }
-.menu__center h4{
+
+.menu__center {
+  display: flex;
+  flex-direction: column;
+
+  grid-column: 1/3;
+  align-items: center;
+}
+
+.menu__center h4 {
   font-size: 20px;
-  }
-  .menu__center label{
-    font-size: 20px;
-    } 
-    .menu__center input{
-      font-size: 20px;
-      width: auto;
-      } 
-      .menu__center button{
-        font-size: 20px;
-        width: auto;
-        } 
+}
+
+.menu__center label {
+  font-size: 20px;
+}
+
+.menu__center input {
+  font-size: 20px;
+  width: auto;
+}
+
+.menu__center button {
+  font-size: 20px;
+  width: auto;
+}
+
 p {
   font-size: 25px;
   width: 200px;
@@ -82,7 +88,7 @@ p {
   padding: 60px;
   grid-gap: 20px;
   grid-auto-flow: unset;
- 
+
 
 }
 
@@ -99,7 +105,7 @@ p {
   display: inline-block;
   text-align: center;
   width: 100%;
-  
+
 }
 
 .menu__titulo {
@@ -117,7 +123,9 @@ p {
 
 .encabezado {
   grid-area: header;
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 20% 1fr;
   align-items: center;
   background-color: pink;
 }
@@ -127,9 +135,9 @@ p {
 
 .barra__form {
   display: flex;
-  width: auto;
+  grid-column: 3;
   height: 30px;
-
+  min-width: 10px;
 
 }
 
@@ -216,8 +224,8 @@ p {
   height: 20px;
   position: relative;
   z-index: 2;
-  margin-right: 50px;
-
+  grid-row: 1;
+  grid-column: 1;
 }
 
 #menu_on span {
@@ -311,7 +319,7 @@ nav a:hover {
 
 
 
-footer  a{
+footer a {
   text-decoration: none;
   color: white;
   font-size: 20px;
@@ -337,6 +345,15 @@ footer  a{
 
 
 @media (min-width: 1000px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vh 1fr 5vh;
+    grid-template-areas: "header header header"
+      "menu menu menu"
+      "footer footer footer";
+  }
+
   .encabezado {
     display: flex;
     position: relative;
@@ -358,7 +375,7 @@ footer  a{
     display: flex;
     font-size: 50px;
     color: white;
-    margin-left: 20px;
+    margin-left: 30px;
     align-items: center;
     justify-content: start;
     margin-right: 30px;
@@ -429,20 +446,23 @@ footer  a{
   }
 
 
-  .menu__center h4{
+  .menu__center h4 {
     font-size: 30px;
-    }
-    .menu__center label{
-      font-size: 30px;
-      } 
-      .menu__center input{
-        font-size: 30px;
-        width: auto;
-        } 
-        .menu__center button{
-          font-size: 30px;
-          width: auto;
-          } 
+  }
+
+  .menu__center label {
+    font-size: 30px;
+  }
+
+  .menu__center input {
+    font-size: 30px;
+    width: auto;
+  }
+
+  .menu__center button {
+    font-size: 30px;
+    width: auto;
+  }
 
 
 }
