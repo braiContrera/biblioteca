@@ -1,19 +1,9 @@
+
 .bg-colorNav {
     background-color: #F06292;
 }
 
-h1 {
-    color: white;
-}
 
-
-a {
-    color: white;
-}
-
-#promocion {
-    height: 80%;
-}
 
 .btn-whatssap {
     background-color: #25D366 !important
@@ -27,30 +17,30 @@ a {
     background-color: #3b5998 !important;
 }
 
-
-
-main {
-    height: 100vh;
-    overflow: auto;
+.main__carrousel{
+    grid-row-start: 2;
+   
 
 }
 
-#menu {
+main {
+
+    overflow: auto;
+    display: grid;
+    grid-template-rows: 200px 1fr;
     background-color: rgb(248, 148, 156);
     background-image: URL("./img/fondo-pagina.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 5px;
-
+ 
 
 }
 
+
+
 footer {
-    background-color: black;
     position: relative;
     bottom: 0;
-
     color: white;
-
 }
