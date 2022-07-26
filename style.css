@@ -24,7 +24,6 @@
 }
 
 main {
-
     overflow: auto;
     display: grid;
     grid-template-rows: 200px 1fr;
@@ -40,7 +39,7 @@ main {
 
 
 footer {
-
-
+    position: relative;
+    bottom: 0;
     color: white;
 }
