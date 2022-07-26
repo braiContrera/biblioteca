@@ -1,66 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@1&display=swap');
 
 .container {
-  display: grid;
-  min-height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 10vh 1fr 5vh;
-  grid-template-areas: "header header header"
-    "menu menu menu"
-    "footer footer footer";
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vh 1fr 5vh;
+    grid-template-areas: "header header header"
+        "menu menu menu"
+        "footer footer footer";
 }
 
-*{
+* {
     margin: 0;
 }
+
 footer {
-  grid-area: footer;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  background-color: rgb(248, 148, 156);
+ 
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: rgb(248, 148, 156);
 }
 
 
-main{
+main {
     grid-area: menu;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns:  75% 15%;
+    grid-template-columns: 75% 15%;
     align-items: center;
     justify-content: left;
     background-color: pink;
-   
+
 }
 
 
 p {
-  font-size: 25px;
-  width: 200px;
-  text-align: center;
+    font-size: 25px;
+    width: 200px;
+    text-align: center;
 }
 
 .menu__section {
-  display: flex;
-  flex-direction: row;
- 
+    display: flex;
+    flex-direction: row;
 
 
-  align-items: center;
-  justify-content: center;
+
+    align-items: center;
+    justify-content: center;
 
 }
 
 .menu__section-imagenes {
 
-  display: flex;
+    display: flex;
 
 }
 
 .menu__imagenes {
-  display: grid;
-  align-content: center;
-  justify-content: center;
+    display: grid;
+    align-content: center;
+    justify-content: center;
 }
 
 
@@ -69,135 +70,109 @@ p {
 
 #libro {
 
-  width: 10em;
-  height: auto;
-  display: flex;
-  flex-direction: column;
+    width: 10em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 
 }
 
 
 .libro__imagen {
-  width: auto;
-  column-gap: 20px;
+    width: auto;
+    column-gap: 20px;
 
 }
 
 #libro p {
-  display: inline-block;
+    display: inline-block;
 
-  width: auto;
-  height: auto;
+    width: auto;
+    height: auto;
 
 }
 
 .menu {
-  display: grid;
-  grid-area: menu;
-  background-image: URL("./img/fondo-pagina.jpg");
-  background-size: cover;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr;
+    display: grid;
+    grid-area: menu;
+    background-image: URL("./img/fondo-pagina.jpg");
+    background-size: cover;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
 
 }
 
 .menu__titulo {
 
-  display: inline-block;
-  grid-column: 1;
-  grid-row: 1;
+    display: inline-block;
+    grid-column: 1;
+    grid-row: 1;
 
-  color: white;
-  text-align: center;
-  font-size: 30px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
 
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 header {
     grid-area: header;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns:  75% 15%;
+    grid-template-columns: 75% 15%;
     align-items: center;
     justify-content: left;
     background-color: pink;
-  }
+}
 
 
 
 
 .barra__form {
-  display: flex;
-  grid-column: 2;
-  height: 25px;
-  align-content: flex-start;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
+    display: flex;
+    grid-column: 2;
+    height: 25px;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
 }
 
 .barra__form button {
-  background-color: transparent;
-  border-width: initial;
-  border-style: none;
+    background-color: transparent;
+    border-width: initial;
+    border-style: none;
 }
 
 .barra__form input {
-  justify-items: flex-start;
-  align-items: flex-start;
-  border-style: none;
+    justify-items: flex-start;
+    align-items: flex-start;
+    border-style: none;
 }
 
 
 
 .barra__form button:hover {
-  transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 
 
 
 
-.promocion1{
-  grid-row: 1;
-  grid-column: 1;
-  border-radius: 10px;
-  box-shadow: 3px 3px rgb(248, 148, 156);
-  background-image: URL("./img/promocion1.png");
-}
-.promocion2{
-    grid-row: 1;
-    grid-column: 2;
+.promocion {
     border-radius: 10px;
     box-shadow: 3px 3px rgb(248, 148, 156);
-    background-image: URL("./img/promocion1.png");
-  }
-
-#menu_on {
-  display: inline-block;
-  width: 25px;
-  height: 20px;
-  position: relative;
-  z-index: 2;
-  grid-row: 1;
-  grid-column: 1;
-
+    margin-bottom: 20px;
 }
-
-
-
-
-
-
 
 
 
 .menu__section-imagenes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: auto;
 
 
 }
@@ -206,10 +181,10 @@ header {
 
 
 footer a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
 }
 
 
@@ -223,8 +198,8 @@ footer a {
 
 
 .encabezado__titulo {
-  display: none;
-  visibility: hidden;
+    display: none;
+    visibility: hidden;
 }
 
 
@@ -232,15 +207,15 @@ footer a {
 
 @media (min-width: 600px) {
 
-  header {
-    grid-area: header;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns:  75% 15%;
-    align-items: center;
-    justify-content: left;
-    background-color: pink;
-  }
+    header {
+        grid-area: header;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 75% 15%;
+        align-items: center;
+        justify-content: left;
+        background-color: pink;
+    }
 
 
 
@@ -249,89 +224,89 @@ footer a {
 
 
 
-  .barra__form {
-    display: flex;
-    width: 70px;
-    grid-column: 2;
-    height: 25px;
-    flex-wrap: nowrap;
-    grid-row: 1;
-    grid-column: 2;
+    .barra__form {
+        display: flex;
+        width: 70px;
+        grid-column: 2;
+        height: 25px;
+        flex-wrap: nowrap;
+        grid-row: 1;
+        grid-column: 2;
 
 
-  }
+    }
 
-  .barra__form button {
-    background-color: transparent;
-    border-width: initial;
-    border-style: none;
-    width: 20px;
-  }
+    .barra__form button {
+        background-color: transparent;
+        border-width: initial;
+        border-style: none;
+        width: 20px;
+    }
 
-  .barra__form input {
-    justify-items: flex-start;
-    align-items: flex-start;
-    border-style: none;
-    
-    width: 130px;
+    .barra__form input {
+        justify-items: flex-start;
+        align-items: flex-start;
+        border-style: none;
 
-  }
+        width: 130px;
 
-
-
-  .barra__form button:hover {
-    transform: scale(1.5);
-  }
-
-  .menu {
-    display: grid;
-    grid-area: menu;
-    background-image: URL("./img/fondo-pagina.jpg");
-    background-position: center;
-    background-size: cover;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 40rem;
+    }
 
 
 
-  }
+    .barra__form button:hover {
+        transform: scale(1.5);
+    }
+
+    .menu {
+        display: grid;
+        grid-area: menu;
+        background-image: URL("./img/fondo-pagina.jpg");
+        background-position: center;
+        background-size: cover;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 40rem;
 
 
 
-  .menu__titulo {
-    font-size: 50px;
-    width: 1px;
-    background-color: red;
-  }
-
-  #menu_on {
-    display: none;
-    visibility: hidden;
-  }
+    }
 
 
 
+    .menu__titulo {
+        font-size: 50px;
+        width: 1px;
 
+    }
 
-
-  li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bolder;
-    font-size: 15px;
-
-  }
+    #menu_on {
+        display: none;
+        visibility: hidden;
+    }
 
 
 
 
-  footer {
-    grid-area: footer;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    background-color: rgb(248, 148, 156);
-  }
+
+
+    li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+        font-size: 15px;
+
+    }
+
+
+
+
+    footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        background-color: rgb(248, 148, 156);
+    }
 }
 
 
@@ -352,73 +327,73 @@ footer a {
         grid-area: header;
         display: grid;
         grid-template-rows: 1fr;
-        grid-template-columns:  75% 15%;
+        grid-template-columns: 75% 15%;
         align-items: center;
         justify-content: left;
         background-color: pink;
-      }
-    
-
-  .encabezado__titulo {
-    visibility: visible;
-    position: relative;
-    display: flex;
-    font-size: 40px;
-    color: white;
-    margin-left: 5px;
-    align-items: center;
-    grid-row: 1;
-    grid-column: 1;
+    }
 
 
-  }
-
-  .barra__form {
-    display: flex;
-    width: 400px;
-    grid-column: 2;
-
-    height: 25px;
-    align-content: flex-start;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    grid-row: 1;
-    grid-column: 3;
-
-  }
-
-  .barra__form button {
-    background-color: transparent;
-    border-width: initial;
-    border-style: none;
-    width: 50px;
-  }
-
-  .barra__form input {
-    justify-items: flex-start;
-    align-items: flex-start;
-    border-style: none;
-    width: 400px;
-
-  }
+    .encabezado__titulo {
+        visibility: visible;
+        position: relative;
+        display: flex;
+        font-size: 40px;
+        color: white;
+        margin-left: 5px;
+        align-items: center;
+        grid-row: 1;
+        grid-column: 1;
 
 
+    }
 
-  .barra__form button:hover {
-    transform: scale(1.5);
-  }
+    .barra__form {
+        display: flex;
+        width: 400px;
+        grid-column: 2;
+
+        height: 25px;
+        align-content: flex-start;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        grid-row: 1;
+        grid-column: 3;
+
+    }
+
+    .barra__form button {
+        background-color: transparent;
+        border-width: initial;
+        border-style: none;
+        width: 50px;
+    }
+
+    .barra__form input {
+        justify-items: flex-start;
+        align-items: flex-start;
+        border-style: none;
+        width: 400px;
+
+    }
 
 
+
+    .barra__form button:hover {
+        transform: scale(1.5);
+    }
 
 
 
 
-  li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bolder;
-    font-size: 20px;
 
-  }
+
+    li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+        font-size: 20px;
+
+    }
 
 }
